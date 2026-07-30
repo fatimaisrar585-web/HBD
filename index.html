@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday, Maheen 🤍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450;1,9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  /* Deep, Muted Dusky Pink & Warm Cream Palette */
+  --cream-light: #f7f2ee;
+  --cream-deep: #eadfd8;
+  --pink-soft: #d8b2bb;
+  --pink-deep: #a05a6f;
+  --pink-accent: #8e5262;
+  --pink-dark: #5e2f3b;
+  
+  --text-main: #4a2f36;
+  --text-muted: #73515a;
+  
+  --card-bg: rgba(255, 252, 250, 0.88);
+  --line: rgba(142, 82, 98, 0.25);
+  --shadow: 0 16px 35px -12px rgba(94, 47, 59, 0.15);
+  --shadow-hover: 0 20px 40px -10px rgba(94, 47, 59, 0.22);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { 
+  scroll-behavior: smooth; 
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cream-light);
+  color: var(--text-main);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Deep, Soft Ambient Background */
+.ambient-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(circle at 15% 20%, #e8cad1 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, #dfc8c0 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(216, 178, 187, 0.3) 0%, transparent 60%);
+  animation: breatheBg 12s ease-in-out infinite alternate;
+}
+
+@keyframes breatheBg {
+  0% { transform: scale(1); opacity: 0.85; }
+  100% { transform: scale(1.05); opacity: 1; }
+}
+
+#sparkle-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', serif;
+  font-weight: 450;
+  letter-spacing: -0.01em;
+}
+
+.cursive {
+  font-family: 'Dancing Script', cursive;
+}
+
+::selection { background: var(--pink-deep); color: #fff; }
+
+button:focus-visible, input:focus-visible, .css-gift:focus-visible {
+  outline: 3px solid var(--pink-accent);
+  outline-offset: 3px;
+}
+
+/* ---------- PASSWORD GATE ---------- */
+
+#passwordPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.lock-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 50px 36px;
+  border-radius: 20px;
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: floatIn 0.8s ease-out both;
+}
+
+.lock-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.lock-card h1 { font-size: 32px; font-weight: 450; margin-bottom: 14px; color: var(--text-main); }
+.lock-card p.sub { font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 26px; font-style: italic; font-family: 'Fraunces', serif; }
+
+input#password {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--text-main);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  letter-spacing: 0.05em;
+}
+
+input#password:focus { border-color: var(--pink-deep); box-shadow: 0 0 12px rgba(160, 90, 111, 0.25); }
+input#password::placeholder { color: var(--text-muted); opacity: 0.6; }
+
+button { font-family: 'Inter', sans-serif; cursor: pointer; border: none; transition: all 0.3s ease; }
+
+.btn-primary, .btn-next {
+  margin-top: 20px;
+  padding: 16px 32px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--pink-accent), var(--pink-dark));
+  color: #fff;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(94, 47, 59, 0.25);
+}
+
+.btn-next { width: auto; margin-top: 36px; display: inline-block; }
+
+.btn-primary:hover, .btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(94, 47, 59, 0.35);
+}
+
+#error { margin-top: 14px; min-height: 18px; font-size: 14px; color: #8e3047; font-weight: 600; }
+
+/* ---------- MAIN SITE ---------- */
+
+#website { display: none; }
+.wrap { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 0 20px 80px; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-date {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  font-weight: 700;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.hero-date::before, .hero-date::after { content: "✧"; margin: 0 10px; color: var(--pink-deep); }
+
+.hero h1.title {
+  font-size: clamp(38px, 8vw, 80px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text-main);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.hero h2.name {
+  font-size: clamp(50px, 11vw, 90px);
+  margin-top: 8px;
+  background: linear-gradient(100deg, var(--pink-accent), var(--pink-deep), #8e5262);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.hero-line {
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pink-deep), transparent);
+  margin: 30px 0;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.hero p.tagline {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: clamp(17px, 2.3vw, 22px);
+  color: var(--text-muted);
+  max-width: 480px;
+  line-height: 1.7;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1s forwards;
+}
+
+.btn-story {
+  margin-top: 40px;
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: rgba(255,255,255,0.7);
+  border: 2px solid var(--pink-accent);
+  color: var(--pink-dark);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0;
+  backdrop-filter: blur(8px);
+  animation: fadeUp 0.8s ease 1.2s forwards;
+}
+
+.btn-story:hover {
+  background: var(--pink-accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(94, 47, 59, 0.25);
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 30px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.4s forwards, bob 2.4s ease-in-out 2s infinite;
+}
+
+/* CARDS */
+section.reveal { display: none; padding-top: 60px; }
+section.reveal.shown { display: block; opacity: 1; }
+
+.card {
+  background: rgba(216, 178, 187, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover { box-shadow: var(--shadow-hover); }
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--pink-accent);
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.card h2 { font-size: clamp(28px, 4.5vw, 38px); font-weight: 450; margin-bottom: 24px; color: var(--text-main); }
+.card p { font-size: 17px; line-height: 2; color: var(--text-main); }
+.card p b { font-weight: 600; color: var(--pink-accent); font-family: 'Fraunces', serif; font-style: italic; }
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  margin-top: 16px;
+  padding-left: 30px;
+  border-left: 2px dashed var(--line);
+}
+
+.tl-item { position: relative; padding-bottom: 32px; }
+.tl-item:last-child { padding-bottom: 0; }
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -37px; top: 6px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--pink-accent);
+  box-shadow: 0 0 0 5px var(--cream-light), 0 0 0 7px var(--pink-soft);
+}
+
+.tl-year {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--pink-accent);
+  margin-bottom: 6px;
+}
+
+/* COMPLIMENTS GRID */
+.compliment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.comp-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 16px rgba(94, 47, 59, 0.05);
+}
+
+.comp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(94, 47, 59, 0.15);
+  border-color: var(--pink-accent);
+}
+
+.comp-card h3 {
+  font-family: 'Fraunces', serif;
+  color: var(--pink-accent);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.comp-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* LETTER */
+#typing-container {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 2.1;
+  color: var(--text-main);
+  white-space: pre-wrap;
+  min-height: 140px;
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px; height: 1.1em;
+  background: var(--pink-accent);
+  margin-left: 3px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-start infinite;
+}
+
+/* CSS GIFT BOX */
+.gift-wrapper { display: flex; justify-content: center; align-items: center; margin: 40px 0 20px; }
+
+.css-gift {
+  position: relative;
+  width: 140px;
+  height: 130px;
+  cursor: pointer;
+  animation: float 3.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.css-gift:hover { transform: scale(1.06); }
+
+.gift-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  width: 120px;
+  height: 85px;
+  background: linear-gradient(135deg, var(--pink-soft), var(--pink-accent));
+  border-radius: 8px;
+  box-shadow: inset -4px -4px 15px rgba(0,0,0,0.08), 0 15px 25px rgba(94, 47, 59, 0.25);
+}
+
+.gift-bottom::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 100%;
+  background: linear-gradient(to right, #fff, var(--cream-deep));
+}
+
+.gift-top {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 140px;
+  height: 35px;
+  background: linear-gradient(135deg, var(--pink-soft), var(--pink-accent));
+  border-radius: 8px;
+  box-shadow: inset -4px -4px 10px rgba(0,0,0,0.08), 0 6px 12px rgba(0,0,0,0.12);
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.css-gift:hover .gift-top { transform: translateY(-12px) rotate(3deg); }
+
+.gift-top::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 100%;
+  background: linear-gradient(to right, #fff, var(--cream-deep));
+}
+
+.gift-bow-left, .gift-bow-right {
+  position: absolute;
+  top: -26px;
+  width: 40px;
+  height: 36px;
+  border: 6px solid var(--cream-light);
+  border-radius: 50% 50% 0 50%;
+}
+
+.gift-bow-left { left: 28px; transform: rotate(20deg); }
+.gift-bow-right { right: 28px; border-radius: 50% 50% 50% 0; transform: rotate(-20deg); }
+
+/* QUADS CHIPS */
+.quads { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.quad-chip {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  border: 2px solid var(--pink-accent);
+  border-radius: 30px;
+  color: var(--pink-dark);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(94, 47, 59, 0.08);
+  transition: all 0.25s ease;
+}
+.quad-chip:hover { background: var(--pink-accent); color: #fff; transform: translateY(-2px); }
+
+/* CAKE */
+.cake { font-size: 80px; margin: 24px 0; animation: float 3.2s ease-in-out infinite; filter: drop-shadow(0 12px 20px rgba(94,47,59,0.25)); }
+
+/* KEYFRAMES */
+@keyframes floatIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes blink { 50% { opacity: 0; } }
+
+@keyframes floatSparkle {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  20% { opacity: 0.5; }
+  80% { opacity: 0.5; }
+  100% { transform: translateY(-10vh) scale(1.3); opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .card { padding: 36px 20px; }
+  .lock-card { padding: 36px 20px; }
+  .compliment-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="ambient-bg"></div>
+<div id="sparkle-container"></div>
+
+<!-- ============ PASSWORD PAGE ============ -->
+<div id="passwordPage">
+  <div class="lock-card">
+    <span class="lock-eyebrow">A Keepsake, Sealed</span>
+    <h1>A Little Something<br>For You</h1>
+    <p class="sub">Only one person in this whole world has the key to this page.</p>
+    <input type="password" id="password" placeholder="Enter the secret password" autocomplete="off">
+    <button class="btn-primary" onclick="checkPassword()">Unlock It ✦</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- ============ MAIN WEBSITE ============ -->
+<div id="website">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-date">31 July</div>
+    <h1 class="title">Happy Birthday</h1>
+    <h2 class="name cursive">Maheen</h2>
+    <div class="hero-line"></div>
+    <p class="tagline">Some friendships are written by fate. Ours is one of them.</p>
+    <button class="btn-story" onclick="openStory()">Read Our Story</button>
+    <div class="scroll-cue">Scroll ↓</div>
+  </header>
+
+  <div class="wrap">
+
+    <!-- STORY -->
+    <section id="story" class="reveal">
+      <div class="card">
+        <span class="eyebrow">Chapter One</span>
+        <h2>Our Story</h2>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">Class 7</div>
+            <p>Everything started here. We were classmates — just two students studying in the same classroom. Life moved on quietly.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Class 9</div>
+            <p>The year our friendship truly began. Random conversations turned into laughing over the smallest things, and slowly, it became something really special.</p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">Class 10</div>
+            <p>The unforgettable year. Every laugh, every conversation, every classroom moment, every goodbye after school — memories that will always stay with us.</p>
+          </div>
+        </div>
+
+        <button class="btn-next" onclick="openCompliments()">Continue →</button>
+      </div>
+    </section>
+
+    <!-- COMPLIMENTS -->
+    <section id="compliments" class="reveal">
+      <div class="card">
+        <span class="eyebrow">Chapter Two</span>
+        <h2>Why You're Amazing</h2>
+        <p>A few reminders of how special you are, just in case you ever forget.</p>
+        
+        <div class="compliment-grid">
+          <div class="comp-card">
+            <h3>Your Heart 💖</h3>
+            <p>You have the purest heart, always caring for those around you and spreading kindness effortlessly.</p>
+          </div>
+          <div class="comp-card">
+            <h3>Your Vibe ✨</h3>
+            <p>You bring such a positive, calming, and joyful energy wherever you go. You light up the room.</p>
+          </div>
+          <div class="comp-card">
+            <h3>Your Smile 🌸</h3>
+            <p>Your smile is literally contagious. It has the power to brighten up the gloomiest of days.</p>
+          </div>
+          <div class="comp-card">
+            <h3>Your Loyalty 🤝</h3>
+            <p>You are a true friend who stands by my side through everything. I appreciate you so much.</p>
+          </div>
+        </div>
+
+        <button class="btn-next" onclick="openLetter()">Read My Letter 💌</button>
+      </div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter" class="reveal">
+      <div class="card">
+        <span class="eyebrow">Chapter Three</span>
+        <h2>A Letter For You</h2>
+        <div id="typing-container">
+          <span id="typing-text"></span><span class="cursor-blink"></span>
+        </div>
+        <button class="btn-next" onclick="openGift()">Open My Gift 💝</button>
+      </div>
+    </section>
+
+    <!-- GIFT -->
+    <section id="gift" class="reveal">
+      <div class="card" style="text-align:center;">
+        <span class="eyebrow">Chapter Four</span>
+        <h2>A Small Gift For You</h2>
+        <p>Every birthday deserves a surprise. Go on, open it up. ✨</p>
+        
+        <div class="gift-wrapper">
+          <div class="css-gift" onclick="openWish()" role="button" tabindex="0" aria-label="Open gift">
+            <div class="gift-bottom"></div>
+            <div class="gift-top">
+              <div class="gift-bow-left"></div>
+              <div class="gift-bow-right"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WISH -->
+    <section id="wish" class="reveal">
+      <div class="card">
+        <span class="eyebrow">Chapter Five</span>
+        <h2>My Prayer For You</h2>
+        <p>
+          On your special day, I pray that Allah fills your life with happiness, peace, good health, success, and endless blessings.<br><br>
+          May every dream you have come true.<br>
+          May every difficulty become easy.<br>
+          May your smile never fade.<br>
+          May your heart always stay peaceful.<br>
+          May Allah protect you wherever you go.<br><br>
+          <b>Ameen.</b> ❤️
+        </p>
+        <button class="btn-next" onclick="openFriendship()">Continue →</button>
+      </div>
+    </section>
+
+    <!-- FRIENDSHIP -->
+    <section id="friendship" class="reveal">
+      <div class="card">
+        <span class="eyebrow">Chapter Six</span>
+        <h2>Our Friendship</h2>
+        <p>
+          Today, we're no longer sitting in the same classroom. We've started a new journey — different colleges, different classmates, different routines.<br><br>
+          But I truly hope one thing never changes: <b>our friendship.</b><br><br>
+          Distance may separate our colleges, but it can never separate the memories we've made together. From Class 7, to becoming friends in Class 9, to the unforgettable memories of Class 10 — those moments will always stay with us.<br><br>
+          I hope that years from now, we'll still laugh together, support each other, and celebrate every success in each other's lives. No matter where life takes us, you'll always be one of the most precious friends I've ever had.
+        </p>
+        <div class="quads">
+          <span class="quad-chip">Fatima</span>
+          <span class="quad-chip">Maheen</span>
+          <span class="quad-chip">Seerat</span>
+          <span class="quad-chip">Maham</span>
+        </div>
+        <button class="btn-next" onclick="showFinal()">Final Surprise ✨</button>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section id="final" class="reveal">
+      <div class="card" style="text-align:center;">
+        <span class="eyebrow">The Last Page</span>
+        <h1 style="font-size:clamp(32px,5.5vw,48px); font-weight:450;">Happy Birthday</h1>
+        <h2 class="cursive" style="font-size: 54px; color: var(--pink-accent); margin-top:8px;">Maheen ❤️</h2>
+        <div class="cake">🎂</div>
+        <p>
+          Thank you for every memory. Thank you for every laugh. Thank you for being an amazing friend.<br><br>
+          May Allah bless you today, tomorrow, and always. Never stop smiling. Never stop believing in yourself.
+        </p>
+        <br>
+        <p style="font-family:'Fraunces',serif; font-style:italic; font-size: 20px; color: var(--pink-accent); border-top: 2px dashed var(--line); padding-top: 24px;">
+          Distance may change our classrooms —<br>but it will never change our friendship.
+        </p>
+        <button class="btn-next" onclick="celebrate()" id="celebrateBtn">Celebrate 🎆</button>
+      </div>
+    </section>
+
+  </div>
+
+  <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <footer style="padding:60px 20px 40px; text-align:center; font-size:14px; color:var(--text-muted); position:relative; z-index:2; font-weight: 500;">
+    Made with <span style="color:var(--pink-accent); margin:0 4px; font-size: 16px;">❤</span> especially for Maheen
+  </footer>
+
+</div>
+
+<script>
+const PASSWORD = "HBM2026";
+
+const letterText = `Happy Birthday, Maheen ❤️
+
+Today isn't just your birthday. It's a day that reminds me how grateful I am to have a friend like you.
+
+We first met in Class 7. Back then, we were just classmates. We knew each other, but we never imagined that one day we'd become such good friends.
+
+Then came Class 9, the year that changed everything. That was the year our friendship truly began. And something even more special happened — we met Seerat and Maham. The four of us became a group... "The Quads." ❤️
+
+From that moment, school became so much more fun. Every recess felt shorter because we never stopped talking. Every class became more enjoyable because we always found something to laugh about. Every school day became a beautiful memory.
+
+Then came Class 10. The Quads became even closer. It was one of the most unforgettable years of our school life. We laughed together, studied together, helped each other, shared secrets, clicked pictures, made countless silly memories, and supported each other during exams. Those memories are priceless.
+
+Even though school has ended, those days will always have a special place in my heart.
+
+Now we've entered a new chapter of life — college. We're no longer studying in the same college. Life has given us different classrooms, different classmates, and different routines. But I sincerely hope that one thing never changes: our friendship.
+
+I pray that no matter how busy life becomes, The Quads always stay connected. May we continue laughing together, making new memories, celebrating each other's successes, and always being there for one another.
+
+Thank you for being such an amazing friend. Thank you for every smile, every laugh, every memory.
+
+Happy Birthday once again, Maheen. May Allah bless you with happiness, good health, success, peace, and endless blessings. May every dream in your heart come true. May Allah always protect you and guide you.
+
+And always remember... distance may change our colleges, but it will never change our friendship.
+
+Happy Birthday, Maheen.
+
+With lots of love,
+Your friend, Fatima ❤️`;
+
+function generateSparkles() {
+  const container = document.getElementById('sparkle-container');
+  if(!container) return;
+  for (let i = 0; i < 25; i++) {
+    let sparkle = document.createElement('div');
+    sparkle.classList.add('ambient-sparkle');
+    sparkle.style.position = 'absolute';
+    sparkle.style.left = Math.random() * 98 + 'vw';
+    sparkle.style.width = sparkle.style.height = (Math.random() * 4 + 2) + 'px';
+    sparkle.style.animationDuration = (Math.random() * 10 + 6) + 's';
+    sparkle.style.animationDelay = (Math.random() * 5) + 's';
+    container.appendChild(sparkle);
+  }
+}
+generateSparkles();
+
+function checkPassword(){
+  const input = document.getElementById("password").value.trim();
+  const errorEl = document.getElementById("error");
+
+  if(input === PASSWORD){
+    document.getElementById("passwordPage").style.display = "none";
+    document.getElementById("website").style.display = "block";
+    const music = document.getElementById("music");
+    music.volume = 0.5;
+    music.play().catch(()=>{});
+    window.scrollTo({top: 0, behavior: "smooth"});
+  } else {
+    errorEl.textContent = "That's not quite it — try again ✦";
+    const card = document.querySelector(".lock-card");
+    card.style.animation = "none";
+    requestAnimationFrame(()=>{ card.style.animation = "floatIn .4s ease"; });
+  }
+}
+
+document.addEventListener("keydown", function(e){
+  if(e.key === "Enter" && document.getElementById("passwordPage").style.display !== "none"){
+    checkPassword();
+  }
+});
+
+function revealSection(id){
+  const el = document.getElementById(id);
+  if(!el) return;
+  el.classList.add("shown");
+  
+  requestAnimationFrame(() => {
+    const yOffset = -20; 
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({top: y, behavior: 'smooth'});
+  });
+}
+
+function openStory(){ revealSection("story"); }
+function openCompliments(){ revealSection("compliments"); }
+function openLetter(){ revealSection("letter"); typeLetter(); }
+
+let letterStarted = false;
+function typeLetter(){
+  if(letterStarted) return;
+  letterStarted = true;
+  const target = document.getElementById("typing-text");
+  if(!target) return;
+
+  let i = 0;
+  function type(){
+    if(i < letterText.length){
+      target.textContent += letterText.charAt(i);
+      i++;
+      setTimeout(type, 16);
+    }
+  }
+  type();
+}
+
+function openGift(){ revealSection("gift"); }
+function openWish(){ revealSection("wish"); }
+function openFriendship(){ revealSection("friendship"); }
+function showFinal(){ revealSection("final"); }
+
+document.querySelector(".css-gift")?.addEventListener("keydown", function(e){
+  if(e.key === "Enter" || e.key === " "){ e.preventDefault(); openWish(); }
+});
+
+function celebrate(){
+  const btn = document.getElementById("celebrateBtn");
+  btn.textContent = "❤ Friendship Forever ❤";
+  btn.style.background = "linear-gradient(135deg, #8e5262, #5e2f3b)";
+  btn.disabled = true;
+
+  const symbols = ["✨","🌸","💖","🎀","✦"];
+  const colors = ["#d8b2bb","#a05a6f","#8e5262","#ffffff"];
+
+  for(let i = 0; i < 70; i++){
+    setTimeout(()=>{
+      const p = document.createElement("div");
+      p.style.position = "fixed";
+      p.style.top = "-30px";
+      p.style.pointerEvents = "none";
+      p.style.zIndex = "99999";
+      p.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      p.style.left = Math.random()*95 + "vw";
+      p.style.color = colors[Math.floor(Math.random()*colors.length)];
+      p.style.fontSize = (16 + Math.random()*16) + "px";
+      p.style.transition = "transform 5s linear, opacity 5s ease-in";
+      document.body.appendChild(p);
+
+      requestAnimationFrame(() => {
+        p.style.transform = `translateY(110vh) rotate(${Math.random() * 360}deg)`;
+        p.style.opacity = "0";
+      });
+
+      setTimeout(()=> p.remove(), 5000);
+    }, i * 40);
+  }
+}
+</script>
+</body>
+</html>
