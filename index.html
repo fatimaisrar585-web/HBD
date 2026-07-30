@@ -31,19 +31,26 @@
   margin: 0; 
   padding: 0; 
   box-sizing: border-box; 
-  -webkit-tap-highlight-color: transparent; /* Removes default tap highlight */
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-focus-ring-color: transparent !important;
+  -webkit-touch-callout: none;
 }
 
-html, body, a, button, input, textarea, select, div, span {
-  -webkit-tap-highlight-color: transparent; /* Extra coverage for mobile WebKit */
-  -webkit-touch-callout: none; /* Prevents callout menu on long-press if needed */
+html, body, button, input, div, span, a {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  outline: none !important;
 }
 
-html { 
-  scroll-behavior: smooth; 
-  overflow-x: hidden;
+button:focus, button:active,
+input:focus, input:active,
+.css-gift:focus, .css-gift:active,
+.quad-chip:focus, .quad-chip:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  box-shadow: none;
 }
-
 body {
   font-family: 'Inter', sans-serif;
   background: var(--cream-light);
